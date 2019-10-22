@@ -1,0 +1,22 @@
+form{
+    width: 50%;
+    border: 2px solid black;
+    padding: 10px;
+    background: cornflowerblue
+    
+}
+.field{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px
+}
+.required{
+    color: red;
+
+}
+.error{
+    border: 2px solid red;
+}
+h3{
+    text-align: center;
+}
