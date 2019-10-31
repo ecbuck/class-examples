@@ -1,0 +1,6 @@
+<!-- const handleButtonClickFuction= function (){ -->
+    <!-- const name= inputElement.value; -->
+
+    <!-- nameElement.textContent= name; -->
+}
+
