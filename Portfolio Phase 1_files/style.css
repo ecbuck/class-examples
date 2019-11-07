@@ -1,47 +1,185 @@
+
+main {
+display: grid;
+grid-gap: 16px;
+grid-template-columns: repeat(2, 1fr) minmax(50px, 1fr);	
+grid-template-rows: repeat(10, min-content);
+grid-auto-flow: auto;
+grid-auto-flow: dense;
+
+@include bp(large) {
+grid-template-columns: 10vw minmax(50px, 50vw) repeat(2, 1fr);	
+grid-template-rows: repeat(10, min-content);
+}
+}
+
+[data-grid='grid-cell'] {
+border-color: rgb(255, 0, 72);
+
+&:hover {
+background: rgb(255, 0, 72);
+}
+}
+
+[data-grid='grid-column'] {
+border-color: rgba(2, 143, 118, .8);
+grid-column: 3;
+grid-row: 2 / 9;
+
+@include bp(large) {
+grid-column: 4;
+grid-row: 1 / 6;
+}
+
+&:hover {
+background: rgba(2, 143, 118, .8);
+}
+
+// Showing overlap
+position: relative;
+
+&:after {
+background: hsla(0, 0%, 10%, .4);
+bottom: 0;
+color: hsl(0, 0, 100%);
+content: "As you can see, grid tracks can overlap";
+left: 0;
+padding: .7rem;
+position: absolute;
+right: 0;
+}
+}
+
+[data-grid='grid-area'] {
+border-color: rgb(138, 0, 84);
+grid-column: 1 / span 2;
+grid-row: span 3;
+
+@include bp(large) {
+grid-column: 2;
+}
+
+&:hover {
+background: rgb(138, 0, 84);
+}
+}
+
+[data-grid='grid-row'] {
+background: rgba(255, 255, 255, .5);
+border-color: rgba(38, 95, 163, .8);
+grid-column: 1 / -1; // -1 jumps to the last grid line to count from the end
+grid-row: 8;
+
+@include bp(large) {
+// declare row to get the overlap
+grid-row: 5;
+}
+
+&:hover {
+background: rgba(38, 95, 163, .8);
+}
+}
+
+.title {
+grid-column: 1 / -1;
+grid-row: 1;
+
+@include bp(large) {
+grid-column: 2;
+}
+}
+
+// Styles for fun
+// -------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Scope+One|Open+Sans:700');
+
 body {
-    margin: 40px;
-  }
-  
-  .wrapper {
-          display: grid;
-      grid-gap: 10px;
-          grid-template-columns: [col] 500px [col] 500px [col] 500px [col] 500px  ;
-          grid-template-rows: [row] auto [row] auto [row] ;
-          background-color: #fff;
-          color: #444;
-      }
-  
-      .box {
-          background-color: #444;
-          color: #fff;
-          border-radius: 5px;
-          padding: 20px;
-          font-size: 150%;
-  
-      }
-  
-      .a {
-          grid-column: col / span 2;
-          grid-row: row ;
-      }
-      .b {
-          grid-column: col 4 / span 4 ;
-          grid-row: row ;
-          
-      }
-      .c {
-          grid-area: auto;
-          grid-column: col ;
-          grid-row: row 2 ;
-      }
-      .d {
-          grid-column: col 2 / span 3 ;
-          grid-row: row 2 ;
-        
-      }
-  
-      .e {
-          grid-column: col / span 4;
-          grid-row: row 3;
-      }
-  
+background: #fff;
+color: rgb(113, 115, 136);
+font-family: 'Scope One', sans-serif;
+font-size: 1rem;
+line-height: 1;
+margin: 1rem;	
+}
+
+h1, h2 {
+margin: 0;
+}
+
+div {
+border: 1px solid #ddd;
+padding: .75vw 1vw;
+}
+
+h1 {
+color: rgb(113, 115, 136);
+font-size: 4.5rem;
+font-weight: 700;
+padding-top: .5rem;
+}
+
+h2 {
+color: #999;
+font-size: 1.25rem;	
+}
+
+[data-grid]  {
+border-width: 1px;
+border-style: solid;
+
+&:hover {
+color: #fff;
+}
+}
+
+a {
+color: #E4844A;
+}
+
+p {
+line-height: 1.5;
+}
+
+strong {
+display: block;
+font-family: "Open Sans", sans-serif;
+font-weight: 300;
+text-transform: lowercase;
+}
+
+footer {
+display: grid;
+grip-gap: 16px;
+grid-template-columns: 10vw minmax(50px, 50vw) 1fr 2fr;
+margin: 0 1rem;
+
+p {
+grid-column: 2 / 4;
+margin-bottom: 5rem;
+}
+}
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color:lightgrey;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: grey;
+}
+
+

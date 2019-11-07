@@ -1,0 +1,90 @@
+
+<!-- saved from url=(0034)http://127.0.0.1:5500/indexcb.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><main>
+    
+      <link rel="stylsheet" href="http://127.0.0.1:5500/style.css">
+    
+  </main>
+  
+    <div>Claire Buck</div>
+    <div class="title">
+      2
+      <h1>Portfolio Claire Phase 3</h1>
+      <h2>Introduction</h2>
+    </div>
+    <div>3</div>
+    <div data-grid="grid-column">
+      4
+      <p>
+        <strong>Grid Track (Column)</strong> A grid track is the space between
+        two adjacent grid lines, forming a grid column or grid row.
+      </p>
+    </div>
+    <div>5</div>
+    <div data-grid="grid-area">
+      6
+      <p>
+        <strong>Grid Area</strong> A grid area consists of one or more adjecent
+        grid cells. It is bound by four grid lines, one on each side of the grid
+        area.
+      </p>
+    </div>
+    <div data-grid="grid-cell">
+      7
+      <p>
+        <strong>Grid Cell</strong> A grid cell is the smallest unit of the grid.
+        A grid cell is the intersection of a grid row and a grid column.
+      </p>
+    </div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div data-grid="grid-row">
+      12
+      <p>
+        <strong>Grid Track (Row)</strong> A grid track is the space between two
+        adjacent grid lines, forming a grid column or grid row.
+      </p>
+    </div>
+    <footer></footer>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
