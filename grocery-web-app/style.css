@@ -1,0 +1,76 @@
+body{
+    display: grid;
+    grid-template-areas: 
+        "nav nav nav nav nav"
+        "main main main main  cart";
+        justify-items: auto;
+        text-justify: auto;
+        
+}
+
+
+.nav-bar{
+    height: 75%;
+    grid-area: nav;
+    background: white;
+
+}
+
+.main{
+    
+    grid-area: main;
+    background: white;
+    min-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart{
+    grid-area: cart;
+    font-size: medium 200px;
+    background: rgb(90, 147, 197);
+    border: solid gainsboro;
+    padding: 30px;
+    text-transform: uppercase;
+
+}
+.button{
+    border-color: cadetblue;
+    width: 50px;
+    height: 100px;
+}
+.box{
+    padding: 1em;
+    height: 200px;
+    width:200px;
+    color: blue;
+    text-transform: uppercase;
+    text-align: center;
+    border: solid lightsteelblue;
+    border-radius: 10px;
+    -moz-border-radius: 15px
+    
+
+}
+.image{
+    background-blend-mode: color white;
+    height: 100px;
+    width: 75px;
+    border: lightgreen;
+    margin: auto;
+    
+}
+h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    color: blue;
+    font-stretch: absolute;
+
+
+    
+}
+.i{
+    color:orange;
+    image-rendering: auto;
+}
