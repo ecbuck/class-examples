@@ -1,0 +1,29 @@
+.button{
+    size: 23px;
+    display: flex;
+    justify-items: center;
+    padding: 15px;
+    color: green;
+    
+}
+.die-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    background: lightblue;
+}
+.die-label{
+    color: blue;
+    font-weight: bold;
+}
+.result{
+    color: red;
+}
+.input-box{
+    border: lightblue;
+    display: flex;
+    justify-self: center;
+    height: 75px;
+    width: 150px;
+}
