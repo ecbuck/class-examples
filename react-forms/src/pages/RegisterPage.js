@@ -4,30 +4,61 @@ class RegisterPage extends React.Component{
     constructor(props){
         super(props)
 
-        this.state = {}
+        this.state = {
+            form: {
+                username: '',
+                password: '',
+                passwordConfirmation: ''
+            },
+            formErrors: {
+                username: '',
+                password: '',
+                passwordConfirmation: ''
+            }
+        };
+
+        this.handleInputChange = this.handleInputChange.bind(this);
+    }
+
+    handleInputChange( input, event){
+        const inputValue = event.target.value;
+        const formClone = Object.assign({}, this.state.form);
+
+        formClone[ input ]= inputValue;
+
+        this.setState( {
+            form: formClone
+        });
+    }
+
+    handleSubmit(e){
+        e.preventDefault();
+    debugger
+
     }
 
     render(){
         return (
-            <div class="register-button">
+            <div class="register-page-container">
                 Register Page
-                <button>Test
-                {/* { onClick ={() => this.ListeningStateChangedEvent({ mode: "register" })} } */}
-        >
-          Register
-                </button>
+                <form onSubmit={ this.handleSubmit}>
+                    <label>
+                        Username:
+                        <input
+                            type="text"
+                            required
+                            minLength="9"
+                            value={ this.state.form.username}
+                            onChange={ (e) =>this.handleInputChange('username',e)}
+                      
+                        />
+                    </label>   
+                    <button> Register </button>
+                </form>
+                
             </div>
         )
     }
 }
-// render() {
-    // return (
-    //   <div className="Register-page-container">
-        // {this.state.mode === "register"
-        //   ? this.renderLoginForm()
-        //   : this.renderForgotPasswordForm()}
-    //   </div>
-    // );
 
-// eslint-disable-next-line no-unreachable
 export default RegisterPage

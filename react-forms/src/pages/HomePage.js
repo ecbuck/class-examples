@@ -2,17 +2,27 @@ import React from "react";
 import AuthContext from "../AuthContext";
 
 class HomePage extends React.Component {
+  static contextType = AuthContext;
+
+  componentDidMount() {
+    const user = localStorage.getItem("currentUser");
+
+    if (user) {
+      this.context.currentUser = user;
+    }
+
+    if (!this.context.currentUser) {
+      this.props.history.push("/login");
+    }
+  }
+
   render() {
     return (
       <AuthContext.Consumer>
         {context => {
           return (
             <div className="home-container">
-              {context.currentUser ? (
-                <span>Welcome, {context.currentUser.username}</span>
-              ) : (
-                <button>Login</button>
-              )}
+              <span>Welcome, user!</span>
             </div>
           );
         }}
@@ -21,18 +31,4 @@ class HomePage extends React.Component {
   }
 }
 
-// class HomePage extends React.Component {
-//   constructor(props) {
-// super(props);
-
-// this.state = {};
-//   }
-
-//   render() {
-// return <div>Home Page</div>;
-//   }
-// }
-
 export default HomePage;
-
-

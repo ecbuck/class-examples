@@ -10,10 +10,11 @@ import RegisterPage from "./pages/RegisterPage";
 import AuthContext from "./AuthContext";
 
 const initialAuthContextState = {
-  currentUser: {
-    username: "clairebuck",
-    password: "supersecretpassword"
-  },
+  // currentUser: {
+  //   username: "clairebuck",
+  //   password: "supersecretpassword"
+  // },
+  currentUser: null,
   users: [
     {
       username: "clairebuck",
@@ -36,18 +37,22 @@ const initialAuthContextState = {
   login(username, password) {
     const exists = this.users.find(user => {
       if (user.username === username && user.password === password) {
+        localStorage.setItem('currentUser', username);
         return true;
       }
     });
 
     if (exists) {
       this.currentUser = exists;
+
+      return this.currentUser;
     } else {
       // show an invalid username/password error
     }
   },
   logout() {
     this.currentUser = null;
+    localStorage.removeItem('currentUser');
   },
   error: null
 };

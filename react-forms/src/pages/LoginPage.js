@@ -1,5 +1,7 @@
 import React from "react";
 
+import LoginForm from '../component /LoginForm'
+
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
@@ -13,15 +15,11 @@ class LoginPage extends React.Component {
     return (
       <div>
         <h1>LOGIN FORM</h1>
-        <button class="button"
-          onClick={() => this.ListeningStateChangedEvent({ mode: "forgot" })}
-        >
-          Forgot Password
-        </button>
-       
+        <LoginForm/>
       </div>
     );
   }
+  
 
   render() {
     return (
