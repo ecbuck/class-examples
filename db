@@ -1,0 +1,30 @@
+DB homework
+
+
+What is a Database? 
+	A collection of data.
+
+Why is an Database necessary? 
+	The importance of a database is related to creating efficiencies and ease of use.
+	
+What can be stored in a Database? 
+	Collections of information, files, items,  etc.
+	
+What types of Databases are there? 
+	SQL / RDBMS / Relational databases
+	NoSQL / Non-relational databases
+	
+Why would I use one over the other? 
+	Choosing one over the other should be based on the need .
+What is a Query? 
+	A request for information .
+What is Encryption? 
+	The process of converting information or data into a code, especially to prevent unauthorized access.
+	
+Why is it important at the Database level? 
+	To protect clients and customers .
+	
+What is Object Permanence? 
+	Object permanence is the knowledge that an object continues to exist even when it can no longer be seen, heard, or perceived in any other way.
+Where can your Database live? 
+On a database engine.git 
