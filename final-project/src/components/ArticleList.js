@@ -8,7 +8,7 @@ class ArticleList extends React.Component{
     render(){
         return (
             <div>
-                lists go here
+                Lists go here!
             </div>
         );
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticleList from './ArticleList';
 
+
 class ArticleSearch extends React.Component{
     constructor(props){
         super(props)
@@ -9,7 +10,11 @@ class ArticleSearch extends React.Component{
     render(){
         return (
             <div>
-                <ArticleList />
+                <input type="text" class="box"></input>
+                <input type="text" class="box"></input>
+                <input type="text" class="box"></input>
+                <input type="text" class="box"></input>
+                
             </div>
         );
     }
