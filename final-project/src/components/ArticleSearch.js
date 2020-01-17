@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticleList from './ArticleList';
+
 
 
 class ArticleSearch extends React.Component{
@@ -11,9 +11,8 @@ class ArticleSearch extends React.Component{
         return (
             <div>
                 <input type="text" class="box"></input>
-                <input type="text" class="box"></input>
-                <input type="text" class="box"></input>
-                <input type="text" class="box"></input>
+
+                
                 
             </div>
         );

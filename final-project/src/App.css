@@ -1,10 +1,17 @@
 .App {
-  text-align: center;
+  text-size-adjust: center;
+}
+h2{
+  color: rgb(110, 110, 228);
+  text-transform: uppercase;
+
+}
+.container-fluid{
+  width: 100%
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  width: 200px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -24,6 +31,10 @@
   color: white;
 }
 
+.col-sm-3 sidenav{
+  height: 100%;
+  
+}
 .App-link {
   color: #61dafb;
 }
@@ -59,4 +70,27 @@ footer {
     padding: 15px;
   }
   .row.content {height: auto;} 
+}
+h2{
+  text-align: center;
+}
+h1{
+  text-align: center;
+}
+.box{
+  align-content: center;
+  width: auto;
+  height: auto;
+  border-color: blueviolet;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+
+}
+.search{
+  vertical-align: middle;
+  pointer-events: all;
+}
+.import-group{
+  color: green;
 }

@@ -1,21 +1,102 @@
-import React from 'react';
-import ArticleSearch from './ArticleSearch';
-import ArticleList from './ArticleList';
+import React from "react";
+import ArticleSearch from "./ArticleSearch";
+import ArticleList from "./ArticleList";
+import Navbar from "./Navbar";
+import NewArticleModalForm from "./NewArticleModalForm";
+import axios from "axios";
 
+class ArticleCollectionPage extends React.Component {
+  constructor(props) {
+    super(props);
 
-class ArticleCollectionPage extends React.Component{
-    constructor(props){
-        super(props)
+    this.handleModelAction = this.handleModelAction.bind(this);
+    this.state = {
+      isModalOpen: false,
+      list: [
+        {
+          title: "Title 1",
+          body: "Body 1",
+          author: "Clair"
+        },
+        {
+          title: "Title 2",
+          body: "Body 2",
+          author: "Clair"
+        },
+        {
+          title: "Title 3",
+          body: "Body 3",
+          author: "Clair"
+        }
+      ]
+    };
+  }
+
+  fetchPosts() {
+    axios
+      .get("http://localhost:3000/api/posts")
+      .then(response => {
+        const newList = response.data;
+
+        this.setState({
+          list: newList
+        });
+      })
+      //TODO this.setState({ list: response.data...})
+      .catch(error => {
+        debugger;
+      });
+  }
+
+  createPost(newArticle) {
+    axios
+      .post("http://localhost:3000/api/posts", newArticle)
+      .then(response => {
+        this.fetchPosts();
+      })
+      .catch(error => {});
+  }
+
+  componentDidMount() {
+    this.fetchPosts();
+  }
+
+  handleModelAction(id, action, newArticle) {
+    if (id === "formModal" && action === "ADD") {
+      // const listClone = [...this.state.list];
+
+      // listClone.push(newArticle);
+
+      // this.setState({
+      //     list: listClone
+      // });
+
+      this.createPost(newArticle);
     }
 
-    render(){
-        return (
-            <div>
-                <ArticleSearch />
-                <ArticleList />
-            </div>
-        );
-    }
+    this.setState({
+      isModalOpen: false
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <ArticleSearch />
+        <ArticleList list={this.state.list} />
+        {this.state.isModalOpen ? (
+          <NewArticleModalForm
+            id="formModal"
+            handleAction={this.handleModelAction}
+          />
+        ) : null}
+        <button onClick={() => this.setState({ isModalOpen: true })}>
+          Add Article
+        </button>
+      </div>
+    );
+  }
 }
 
-export default ArticleCollectionPage ;
+export default ArticleCollectionPage;
