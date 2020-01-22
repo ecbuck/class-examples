@@ -9,7 +9,13 @@ h2{
 .container-fluid{
   width: 100%
 }
+.article-list-container{
+  border-block-width: 75px;
 
+}
+.registration-form{
+  background-color: lightyellow;
+}
 .logo {
   width: 200px;
 }
@@ -94,3 +100,22 @@ h1{
 .import-group{
   color: green;
 }
+.model-container{
+  background-color: lightsteelblue;
+  width: 100px;
+
+}
+.my-form-container{
+  background-color: honeydew;
+  padding-inline-end: 5px;
+  border: solid white;
+  
+}
+.col-sm-3 sidenav{
+  text-align: right;
+  height: 100%;
+  text-transform: lowercase;
+  background-color: lightyellow;
+
+}
+

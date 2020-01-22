@@ -2,14 +2,11 @@
 .row.content {height: 2500px}
     
 /* Set gray background color and 100% height */
-.sidenav {
-  height: 100%;
-  color: green;
-}
+
 
 /* Set black background color, white text and some padding */
 footer {
-  background-color: #555;
+  background-color: lightgoldenrodyellow;
   color: white;
   padding: 15px;
 }
@@ -26,5 +23,6 @@ footer {
     text-align: right;
     height: 100%;
     text-transform: lowercase;
+    background-color: lightyellow;
 
 }

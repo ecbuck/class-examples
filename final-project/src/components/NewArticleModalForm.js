@@ -7,7 +7,8 @@ class NewArticleModalForm extends React.Component {
 
     this.state = {
       title: "",
-      body: ""
+      body: "",
+      author: ""
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -26,7 +27,7 @@ class NewArticleModalForm extends React.Component {
     const newArticle = {
       title: this.state.title,
       body: this.state.body,
-      // author: this.state.author,
+      author: this.state.author,
       publishDate: new Date()
     };
 
@@ -57,6 +58,16 @@ class NewArticleModalForm extends React.Component {
                 onChange={e => this.setState({ body: e.target.value })}
               />
             </label>
+            <label>
+              Author
+              <input
+                type="name"
+                required
+                value={this.state.author}
+                onChange={e => this.setState({ author: e.target.value })}
+              />
+            </label>
+            <br/>
             <button>Add</button>
           </form>
           <div className="actions">

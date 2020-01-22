@@ -1,21 +1,22 @@
 import React from 'react';
 import Article from './Article';
 
+
 class ArticleList extends React.Component{
     constructor(props){
         super(props);
     }
 
     renderArticleList() {
-        return this.props.list.map((item) => {
-            return <Article data={ item } key={ item.title }/>
+        return this.props.list.map((item, index) => {
+            return <Article data={ item } key={ index }/>
         });
     }
 
     render(){
         return (
             <div className="article-list-container">
-                { this.renderArticleList() }
+                { this.props.list.length > 0 ? this.renderArticleList() : ''}
             </div>
         );
     }

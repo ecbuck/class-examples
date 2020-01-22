@@ -9,13 +9,14 @@ class ArticleSearch extends React.Component{
 
     render(){
         return (
+               
             <div>
-                <input type="text" class="box"></input>
-
-                
                 
             </div>
-        );
+                
+                
+        
+        )
     }
 }
 

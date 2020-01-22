@@ -38,7 +38,7 @@ function App() {
     
 
 
-      <h4>Thoughts :</h4>
+      <h4>Ideas for new content :</h4>
       <form role="form">
         <div class="form-group">
           <textarea class="form-control" rows="3" required></textarea>
@@ -89,7 +89,6 @@ function App() {
 </div>
 
 <footer class="container-fluid">
-  <p>Email me!</p>
   
 </footer>
     </div>

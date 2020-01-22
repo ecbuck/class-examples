@@ -4,6 +4,9 @@ import ArticleList from "./ArticleList";
 import Navbar from "./Navbar";
 import NewArticleModalForm from "./NewArticleModalForm";
 import axios from "axios";
+import MyForm from "./MyForm"; 
+
+
 
 class ArticleCollectionPage extends React.Component {
   constructor(props) {
@@ -12,23 +15,7 @@ class ArticleCollectionPage extends React.Component {
     this.handleModelAction = this.handleModelAction.bind(this);
     this.state = {
       isModalOpen: false,
-      list: [
-        {
-          title: "Title 1",
-          body: "Body 1",
-          author: "Clair"
-        },
-        {
-          title: "Title 2",
-          body: "Body 2",
-          author: "Clair"
-        },
-        {
-          title: "Title 3",
-          body: "Body 3",
-          author: "Clair"
-        }
-      ]
+      list: []
     };
   }
 
@@ -44,7 +31,7 @@ class ArticleCollectionPage extends React.Component {
       })
       //TODO this.setState({ list: response.data...})
       .catch(error => {
-        debugger;
+        
       });
   }
 
@@ -52,6 +39,7 @@ class ArticleCollectionPage extends React.Component {
     axios
       .post("http://localhost:3000/api/posts", newArticle)
       .then(response => {
+          debugger
         this.fetchPosts();
       })
       .catch(error => {});
@@ -94,6 +82,7 @@ class ArticleCollectionPage extends React.Component {
         <button onClick={() => this.setState({ isModalOpen: true })}>
           Add Article
         </button>
+        <MyForm/>
       </div>
     );
   }
