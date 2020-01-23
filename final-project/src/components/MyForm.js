@@ -9,12 +9,12 @@ class MyForm extends React.Component {
             Your email:
             <input type="text" name="_replyto" />
           </label>
-          <label>
-            Your message:
-            <textarea name="message"></textarea>
+          <label className="message-area">
+            Send a  message:
+            <textarea className="text-area" name="message"></textarea>
           </label>
 
-          <button type="submit">Register</button>
+          <button className="submit-button" type="submit">Register</button>
         </form>
       </div>
     );

@@ -58,8 +58,12 @@ h2{
     
 /* Set gray background color and 100% height */
 .sidenav {
-  background-color: #f1f1f1;
+  background-color: lightgrey;
   height: 100%;
+  font-weight: bolder;
+  text-transform: lowercase;
+
+
 }
 
 /* Set black background color, white text and some padding */
@@ -106,8 +110,7 @@ h1{
 
 }
 .my-form-container{
-  background-color: honeydew;
-  padding-inline-end: 5px;
+  justify-content: space-evenly;
   border: solid white;
   
 }
@@ -117,5 +120,18 @@ h1{
   text-transform: lowercase;
   background-color: lightyellow;
 
+}
+.message-area{
+  background-color: white;
+  
+}
+.text-area{
+  background-color: whitesmoke;
+}
+.submit-button{
+  text-align: center;
+  width: 150px;
+  color: black;
+  
 }
 
