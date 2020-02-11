@@ -8,6 +8,7 @@
     background-color: #efefef;
     margin-top: 20px;
     padding: 10px 0px 5px 0px;
+    border-block-color: green;
 }
     p:first-letter{ 
          display:block; 
@@ -34,4 +35,8 @@ h1{
     text-align: center;
     color: darkblue;
 }
-
+#header .grid_12{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
